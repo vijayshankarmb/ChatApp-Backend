@@ -32,7 +32,7 @@ export const registerUser = async (payload: RegisterUserPayload) => {
     );
 
     return {
-        id: user._id, 
+        id: user._id.toString(), 
         username: user.username,
         email: user.email
     }
@@ -56,7 +56,7 @@ export const loginUser = async (payload: LoginUserPayload) => {
     }
 
     return {
-        id: user._id,
+        id: user._id.toString(),
         username: user.username,
         email: user.email
     }
